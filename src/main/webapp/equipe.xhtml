@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:head>
+		<title>Equipe</title>
+	</h:head>
+	
+	<f:metadata>
+		<f:viewParam name="id" value="#{equipeController.equipeId}" />
+		<f:event listener="#{equipeController.findEquipe}"
+				 type="preRenderView"/>
+	</f:metadata>
+	
+	<h:body>
+		
+		<p>
+			<b>Name:</b> #{equipeController.equipe.name}
+		</p>
+		<p>
+			<b>Colors:</b> #{equipeController.equipe.colors}
+		</p>
+		
+	</h:body>
+
+</html>
